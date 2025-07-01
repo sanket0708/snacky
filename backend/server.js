@@ -9,6 +9,8 @@ import orderRouter from "./routes/orderRoute.js";
 
 const app = express();
 
+const port = process.env.PORT || 4000;
+
 //middleware
 app.use(express.json());
 app.use(cors({
@@ -38,13 +40,6 @@ app.get("/", (req, res) => {
   res.send("Hello there api working");
 });
 
-if (process.env.NODE_ENV !== "production") {
-  const port = process.env.PORT || 4000;
-  app.listen(port, () => {
-    console.log(`server is running on port ${port}`);
-  });
-
-}
-
-export default server;
-
+app.listen(port, () => {
+  console.log(`server is running on port ${port}`);
+});
