@@ -1,0 +1,160 @@
+.footer {
+  color: #d9d9d9;
+  background-color: #323232;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 20px 8vw;
+  padding-top: 80px;
+  margin-top: 100px;
+}
+
+.footer-social-icons {
+  margin-top: 15px;
+}
+
+.footer-content {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 80px;
+}
+
+.footer-content-left,
+.footer-content-right,
+.footer-content-center {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 20px;
+}
+
+.footer-content-left li,
+.footer-content-right li,
+.footer-content-center li {
+  list-style: none;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.footer-content-right h2,
+.footer-content-center h2 {
+  color: white;
+}
+
+.footer-social-icons img {
+  width: 40px;
+  margin-right: 15px;
+  cursor: pointer;
+}
+
+.footer hr {
+  width: 100%;
+  height: 2px;
+  margin: 20px 0;
+  background-color: gray;
+  border: none;
+}
+
+.footer-logo {
+  width: 193px;
+  position: relative;
+  bottom: 24px;
+  right: 20px;
+}
+
+.footer-content-left {
+  width: 68%;
+  left: 40px;
+  position: relative;
+}
+
+.footer-copyright {
+  text-align: center;
+  font-size: 0.85rem;
+  color: #b3b3b3;
+  width: 100%;
+  padding: 10px 0;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 1200px) {
+  .footer-content {
+    gap: 40px;
+  }
+
+  .footer-logo {
+    width: 160px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .footer-content {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+
+  .footer-content-left {
+    grid-column: 1 / -1;
+    left: 0;
+  }
+
+  .footer-logo {
+    position: static;
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .footer {
+    padding: 40px 5vw;
+  }
+
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .footer-content-left,
+  .footer-content-right,
+  .footer-content-center {
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .footer-social-icons {
+    justify-content: flex-start;
+  }
+
+  .footer-logo{
+    position: relative;
+    top: 1px;
+  }
+
+  .footer-social-icons img {
+    margin-right: 15px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .footer {
+    padding: 30px 4vw;
+  }
+
+  .footer-content {
+    gap: 25px;
+  }
+
+  .footer-logo {
+    width: 140px;
+  }
+
+  .footer-social-icons img {
+    width: 35px;
+  }
+
+  .footer-copyright {
+    font-size: 0.8rem;
+  }
+}
