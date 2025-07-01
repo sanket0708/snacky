@@ -13,7 +13,15 @@ const port = process.env.PORT || 4000;
 
 //middleware
 app.use(express.json());
-app.use(cors());
+app.use(cors({
+  origin: [
+    "https://snacky-frontend.onrender.com", // main frontend
+    "https://snacky-admin-rtk8.onrender.com",    // admin panel
+    "http://localhost:5173",                // local dev
+    "http://localhost:5174"                 // local admin dev
+  ],
+  credentials: true
+}));
 
 //db connection
 connectDB();
